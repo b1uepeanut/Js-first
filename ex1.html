@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+</head>
+<body>
+    <script>
+        var input1 = prompt("숫자1를 입력해 주세요");
+        var n1 = Number(input1);
+        var input2 = prompt("숫자2를 입력하세요.");
+        var n2 = Number(input2);
+        console.log(n1 + "+" + n2 + "=" + (n1+n2));
+        console.log(n1 + "-" + n2 + "=" + (n1-n2));
+        console.log(n1 + "/" + n2 + "=" + (n1/n2));
+        console.log(n1 + "*" + n2 + "=" + (n1*n2));
+
+        var input3 = prompt("키를 입력하세요(cm)");
+        var height = Number(input3)/100;
+        var input4 = prompt("몸무게를 입력하세요");
+        var weight = Number(input4);
+        var bmi = weight / (height * height);
+        console.log("당신의 BMI(체지방률)은 " + bmi + "입니다.");
+
+        var input6 = prompt("섭씨를 입력하세요.");
+        var c = Number(input6);
+        var t = (c*9/5)+32;
+        console.log("섭씨를 화씨로 바꾸면 "+ t +"입니다.");
+
+        var input7 = prompt("문자를 입력하세요");
+        var totLength = input7.length;
+        console.log("당신이 입력한 문자의 길이는 총 " + totLength+"개 입니다.");
+
+        
+        var s1 = prompt("아무 말이나 넣어 주세요.");        
+        var len = s1.length;
+        
+        document.write(s1 + "의 길이는 "  + len + "입니다.");
+
+
+
+    </script>
+</body>
+</html>
