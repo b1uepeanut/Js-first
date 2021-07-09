@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h3>소수판별 프로그램</h3>
+    <script>
+        // for( var n = 1; n<=100; n++)
+        // {
+        //     if(n%2 !=0 && n%3 !=0 && n%5 !=0 && n%7 !=0)
+        //     {
+        //         console.log(n);
+        //     }
+        //     else if(n ===1 || n===2 || n===3 ||n===5|| n===7)
+        //     {
+        //         console.log(n);
+        //     }
+        // }
+
+
+    var n1 = Number(prompt("숫자 입력: "));
+    if(n1%2 !=0 && n1%3 !=0 && n1%5 !=0 && n1%7 !=0)
+    {
+        console.log(n1 + "은 소수입니다.");
+    }
+    
+    else if(n1 ===1 || n1===2 || n1===3 ||n1===5|| n1===7)
+     {
+       console.log(n1 + "은 소수입니다.");
+     }
+     else
+     {
+         console.log(n1 + "은 소수가 아닙니다.");
+     }
+    </script>
+</body>
+</html>
