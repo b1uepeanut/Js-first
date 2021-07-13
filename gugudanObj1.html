@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gugudan with obiect</title>
+</head>
+<body>
+    <script>
+    var gugudan ={};
+    gugudan.calculate = function(n){
+        
+        document.write("<h2>"+ n + "단</h2>")
+        for( var i = 1; i<=9; i++)
+        {
+            document.write(n + " X " + i + " = " + n*i + "<br>");
+        }
+
+    }
+
+    function main()
+    {
+        for( var i = 1; i<=9; i++)
+        {
+            gugudan.calculate(i);
+        }
+    }
+
+    main();
+    </script>
+</body>
+</html>
