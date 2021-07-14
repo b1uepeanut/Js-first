@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator3</title>
+</head>
+<body>
+    <h2>구구단 조건문 활용</h2>
+    <div id = 'output'>
+        첫 번째 수 입력 : <input id = 'n1', type='text'><br>
+        첫 번째 수 입력 : <input id = 'n2', type='text'><br>
+        연산자 입력 : <input id="n3", type='text'><br>
+        <button id='btn' onclick="calc()">실행</button>
+    </div>
+
+    <script>
+        function calc()
+        {
+            var str1 = document.getElementById('n1').value;
+            var str2 = document.getElementById('n2').value;
+            var str3 = document.getElementById('n3').value;
+            var n1 = Number(str1);
+            var n2 = Number(str2);
+
+            str = '';
+            if(str3 ==="+")
+            {
+
+                str += "더하기 : " + (n1+n2);
+            }
+            else if(str3 ==="-")
+            {
+
+                str += "뺴기 : " + (n1-n2);
+            }
+            else if(str3 ==="*")
+            {
+
+                str += "곱하기 : " + (n1*n2);
+            }
+            else if (str3 ==="/")
+            {
+
+                str += "나누기 : " + (n1/n2);
+            }
+
+            var out = document.getElementById('output');
+            out.innerHTML = str;
+
+        }
+    </script>
+</body>
+</html>
