@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+</head>
+<body>
+    <h2>계산기</h2>
+    <div id = "cal">
+        식을 입력하세요
+        <input id= "an" type = "text">
+        <button id='bt' onclick="calculate()">확인</button>
+    </div>
+    <script>
+        var calculate = function()
+        {
+            var input = document.getElementById('bt');
+            var x = input.value;
+
+            
+        x.split("");
+        console.log(x);
+        for(var n = 0; n<x.length; n++ )
+        {
+            if(x[i] === "X")
+            {
+                x[i] = x[i-1]+ x[i+1];
+            }
+            if(x[i] === "-")
+            {
+                x[i] = x[i-1]- x[i+1];
+            }
+            if(x[i] === "*")
+            {
+                x[i] = x[i-1]* x[i+1];
+            }
+            if(x[i] === "/")
+            {
+                x[i] = x[i-1] / x[i+1];
+            }
+            document.write(x[i]);
+        }
+      
+        };
+
+    </script>
+</body>
+</html>
