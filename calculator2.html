@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator2</title>
+</head>
+<body>
+    <h2>계산기 구현하기</h2>
+    <div id="div">
+        <input id = "n1" type = "text">
+        <input id = "n2" type = "text">
+        <button id = 'btn' onclick = cal()>확인
+    </div>
+    <script>
+        function cal()
+        {
+            var x = document.getElementById('n1').value;
+            var y = document.getElementById('n2').value;
+            x = Number(x);
+            y = Number(y);
+
+            var t = 0;
+            t += x+y;
+            document.write(x + " + " + y + " = " + t + "<br>")
+            t = 0;
+            t += x-y;
+            document.write(x + " - " + y + " = " + t+ "<br>")
+            t = 0;
+            t += x*y;
+            document.write(x + " * " + y + " = " + t+ "<br>")
+            t = 0;
+            t += x/y;
+            document.write(x + " / " + y + " = " + t + "<br>")
+        }
+    </script>
+</body>
+</html>
