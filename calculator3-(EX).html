@@ -26,16 +26,23 @@
 
             var out = document.getElementById('output');
             var str = "";
-            if(op==="+"){
-                str += "더하기 : " + (n1+n2) + "<br>";
-            } else if(op==="-"){
-                str += "빼기 : " + (n1-n2) + "<br>";
-            } else if(op==="*"){
-                str += "곱하기 : " + (n1/n2) + "<br>";
-            }  else if(op==="/"){
-                str += "나누기 : " + (n1*n2) + "<br>";
-            } else {
-                str += "연산자에는 4칙연산자만 입력해 주세요.";
+
+            switch(op)
+            {
+                case "+" :
+                    str += "더하기 : " + (n1+n2) + "<br>";
+                    break;
+                case "-" :
+                    str += "빼기 : " + (n1-n2) + "<br>";
+                    break;
+                case "*" :
+                    str += "나누기 : " + (n1*n2) + "<br>";
+                    break;
+                case "/" :
+                    str += "연산자에는 4칙연산자만 입력해 주세요.";
+                    break;
+                default:
+                    str += "잘못 입력하셨습니다.";
             }
             out.innerHTML = str;
         }
