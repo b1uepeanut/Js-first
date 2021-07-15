@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator7</title>
+</head>
+<body>
+    <h2>한 줄로 입력받아 처리하기</h2>
+    <div>
+        계산식 입력<br>
+        <input id = 'input' type="text">
+        <button id = 'an' onclick="calc()">실행</button>
+    </div>
+    <div id = 'output'></div>
+
+    <script>
+        var input = {};
+
+        input.init = function(str)
+        {
+            this.list = str.split(" ");
+        };
+
+        input.empty = function()
+        {
+            return this.list.length == 0;
+        };
+
+        input.getValue = function()
+        {
+            var str = this.list.shift();
+            var n = Number(str);
+            return n;
+        };
+  
+        input.getOperator = function()
+        {
+                var op = this.list.shift();
+                if (op ==="+" || op ==="-" || op ==="*" || op ==="/")
+                {
+                    return op;
+                }
+                else
+                {
+                    return "$";
+                }
+        };
+
+        var  calculator = {};
+        calculator.calculator = function(first, second, op)
+        {
+            var ret;
+            switch(op)
+            {
+                case "+":
+                    ret = first + second; break;
+                case "-":
+                    ret = first - second; break;
+                case "*":
+                    ret = first * second; break;
+                case "/":
+                    ret = first / second; break;
+                default : 
+                    return NaN;
+            }
+            return ret;   
+        };
+
+        var output = {};
+        output.out= document.getElementById('output');
+        output.print = function(value)
+        {
+            this.out.innerHTML =  "최종 계산 결과는 " + value;
+        };
+
+       
+        function calc()
+        {
+            var str = document.getElementById('input').value;
+            input.init(str);
+
+            var result = input.getValue();
+            while (!input.empty())
+            {
+                var op = input.getOperator();
+                var second = input.getValue();
+                result = calculator.calculator(result,second, op);
+            }
+            output.print(result);
+        }
+   /*
+        function get()
+        {
+            
+            var input = document.getElementById('input').value;
+            var n = input.split(" ");
+            var total = 0;
+            for(var i=0; i<n.length; i++)
+            {
+                
+                if(n[i] ==="+") {
+                    total = n[i-1] + n[i+1]
+                }
+                else if (n[i] === "-") {
+                    total = n[i-1] - n[i+1]
+                } 
+                else if (n[i] === "*"){
+                    total = n[i-1] * n[i+1]
+                } 
+                else if (n[i] === "/"){
+                    total = n[i-1] / n[i+1]
+                }
+
+            }
+            var out = document.getElementById('output');
+            out.innerHTML = "계산 결과 : " + total;
+        }      
+    */
+    </script>
+</body>
+</html>
