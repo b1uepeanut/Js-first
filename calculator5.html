@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>함수를 활용한 계산기</h2>
+    <div id ='print'></div>
+    <script>
+        function getFirstValue()
+        {
+            var n1 = Number(prompt("1번째 수를 입력하세요."));
+            return n1;
+        }
+        
+        var n = 2;
+        function getSecondValue() 
+        {
+            var n2 = Number(prompt(n + "번째 수를 입력하세요."));
+            return n2;
+        }
+        function getOperator()
+        {
+            while(true)
+            {
+                var op = prompt("연산자를 입력하세요");
+                if (op ==="+" || op ==="-" || op ==="*" || op ==="/" || op ==="q")
+                {
+                    break;
+                }
+                else
+                {
+                    alert("올바은 연산자를 입력해 주세요.");
+                }
+            }
+            return op;
+        }
+
+        function calculate(first,second, op)
+        {
+            var ret;
+            switch(op)
+            {
+                case "+":
+                    ret = first + second; break;
+                case "-":
+                    ret = first - second; break;
+                case "*":
+                    ret = first * second; break;
+                case "/":
+                    ret = first / second; break;
+            }
+            return ret;
+            
+        }
+        function print(value)
+        {
+            return  "최종 계산 결과는 " + result;
+        }
+        function main()
+        {
+            var result = getFirstValue();
+            while(true)
+            {
+                var op = getOperator();
+                if(p ==='q')
+                {
+                    break;
+                }
+                var num = getSecondValue();
+                result = calculate(result, num,op);
+            }
+            var output = document.getElementById('output');
+            output.innerHTML = print();
+        }
+        main();
+    </script>
+</body>
+</html>
