@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2>함수를 활용한 계산기</h2>
-    <div id ='print'></div>
+    <div id ='output'></div>
     <script>
         function getFirstValue()
         {
@@ -58,7 +58,7 @@
         }
         function print(value)
         {
-            return  "최종 계산 결과는 " + result;
+            return  "최종 계산 결과는 " + value;
         }
         function main()
         {
@@ -66,7 +66,7 @@
             while(true)
             {
                 var op = getOperator();
-                if(p ==='q')
+                if(op ==='q')
                 {
                     break;
                 }
@@ -74,7 +74,7 @@
                 result = calculate(result, num,op);
             }
             var output = document.getElementById('output');
-            output.innerHTML = print();
+            output.innerHTML = print(result);
         }
         main();
     </script>
