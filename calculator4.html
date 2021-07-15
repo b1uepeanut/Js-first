@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>반복문을 활용한 사칙연산 계산기 만들기</h2>
+    <div id ="output"></div>
+    <script>
+        function main()
+        {
+            var n1 = Number(prompt("첫 번째 숫자를 입력해 주세요."));
+            var out = document.getElementById('output');
+
+            var op,n2;
+            var str ="";
+            var n =2;
+            var result =n1;
+            while(true)
+            {
+                op = prompt("연산자를 입력해 주세요.");
+                if (op ==="q")
+                {
+                    break;
+                }
+
+                n2 = Number(prompt(n + "번째 숫자를 입력해 주세요."));
+
+                if(op==="+"){
+                    result += n2
+                } else if (op ==="-"){
+                    result -= n2;
+                } else if (op ==="*"){
+                    result *= n2;
+                } else if (op ==="/"){
+                    result /= n2;
+                } else {
+                    result = "중간오류"
+                    break;
+                }
+                n++;
+
+            }
+            out.innerHTML = "최종 결과값은 " + result;
+        }
+        main();
+    </script>
+   <script>
+       /*
+        var i= 0;
+        var str = [];
+        while(true)
+        {
+            var n = prompt("값");
+            str[i] = n;
+            if(str[i] === 'quite')
+            {
+                break;
+            }
+           i++;
+       };
+
+       for( var n  = 0; n <str.length; n++)
+       {
+            if(str[n] =! "+" || str[n] != "-" || str[n] != "*" || str[n] != "/")
+            {
+                str[n] = Number(str[n]);
+
+            }
+      
+       }
+       for(var n = 0; n < str.length; n++ )
+        {
+            if(str[i] === "X")
+            {
+                str[i] = str[i-1]+ str[i+1];
+            }
+            if(str[i] === "-")
+            {
+                str[i] = str[i-1]- str[i+1];
+            }
+            if(str[i] === "*")
+            {
+                str[i] = str[i-1]* str[i+1];
+            }
+            if(str[i] === "/")
+            {
+                str[i] = str[i-1] / str[i+1];
+            }
+            document.write(str[i]);
+        }*/
+   </script>
+</body>
+</html>
