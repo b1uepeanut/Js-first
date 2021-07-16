@@ -89,20 +89,26 @@ var clickNumbers = function (event) {
     var str = event.target.innerHTML;
     console.log(str);
 
-    if (str === 'bs') {
+    if (str === 'bs')
+    {
         input.array.pop();
     }
-    else if (str === '+' || str === '-' || str === '*' || str === '/') {
+    else if (str === '+' || str === '-' || str === '*' || str === '/')
+    {
         input.array.push(' ' + str + ' ');
     }
-    else {
+    else 
+    {
         input.array.push(str);
     }
 
-    if (input.empty()){
+    
+    if (input.empty())
+    {
         output.text.innerHTML = 0;
     }
-    else {
+    else
+     {
         output.display();
     }
 };
