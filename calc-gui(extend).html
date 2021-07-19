@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator-gui</title>
+    <style>
+        #output 
+        {
+            background-color: rgb(247, 160, 60);
+            width: 480px;
+            padding: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 40px;
+            color: rgb(34, 124, 54);
+        }
+
+        button
+        {
+            background-color: rgb(108, 144, 243);
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 40px;
+            color:rgb(59, 59, 35)
+
+        }
+    </style>
+</head>
+<body>
+    <h2>JS 계산기</h2>
+    <div>
+        <div id = 'output'>0</div>
+        <div id = 'btn1'>
+            <button  id = '7' onclick="clickNumbers(event)">7</button>
+            <button  id = '8' onclick="clickNumbers(event)">8</button>
+            <button  id = '9' onclick="clickNumbers(event)">9</button>
+            <button  id = 'div' onclick="clickNumbers(event)">/</button>
+        </div>
+        <div id = 'btn2'>
+            <button  id = '4' onclick="clickNumbers(event)">4</button>
+            <button  id = '5' onclick="clickNumbers(event)">5</button>
+            <button  id = '6' onclick="clickNumbers(event)">6</button>
+            <button  id = 'mul' onclick="clickNumbers(event)">*</button>
+        </div>
+        <div id = 'btn3'>
+            <button  id = '7' onclick="clickNumbers(event)">1</button>
+            <button  id = '8' onclick="clickNumbers(event)">2</button>
+            <button  id = '9' onclick="clickNumbers(event)">3</button>
+            <button  id = 'sub' onclick="clickNumbers(event)">-</button>
+        </div>
+        <div id = 'btn4'>
+            <button  id = 'del' onclick="clickNumbers(event)">bs</button>
+            <button  id = '0' onclick="clickNumbers(event)">0</button>
+            <button  id = 'eq' onclick="showResult(event)">=</button>
+            <button  id = 'plus' onclick="clickNumbers(event)">+</button>
+        </div>
+    </div>
+
+    <script src = 'calc-gui(extend).js'></script>
+</body>
+</html>
