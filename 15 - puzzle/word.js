@@ -41,7 +41,7 @@ game.removeButtons = function(){
 
 game.checkGood = function()
 {
-    return this.answer ===this.letters.join('');
+    return this.answer === this.letters.join('');
 };
 
 game.updateDisplay = function () {
@@ -145,6 +145,7 @@ game.shuffle = function () {
         game.Rshift();
     }
 };
+
 game.shuffle();
 
 var updateTime = function(){
